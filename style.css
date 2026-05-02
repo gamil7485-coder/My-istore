@@ -1,0 +1,219 @@
+/* --- 1. الإعدادات العامة (General) --- */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+
+body { 
+    background-color: #f5f5f7; /* لون خلفية الموقع العامة (رمادي فاتح جداً) */
+    color: #1d1d1f; 
+}
+
+/* --- 2. شريط التنقل (Navbar) --- */
+.navbar { 
+    background: #ffffff; 
+    padding: 15px 50px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+    position: sticky; 
+    top: 0; 
+    z-index: 100; 
+}
+
+.logo { 
+    font-size: 26px; 
+    font-weight: bold; 
+    color: #000;
+    letter-spacing: -1px;
+}
+
+.nav-links a { 
+    text-decoration: none; 
+    color: #333; 
+    margin-left: 25px; 
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #0071e3;
+}
+
+/* --- 3. صفحة تسجيل الدخول (التعديل المطلوب) --- */
+.auth-body { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    margin: 0;
+    /* الخلفية سودة تماماً في الأساس */
+    background-color: #000000; 
+    /* وضع الصورة مع طبقة تعتيم متدرجة للأسود */
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/login-bg.jpg');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.login-container { 
+    background: rgba(255, 255, 255, 0.95); 
+    padding: 45px; 
+    border-radius: 25px; 
+    width: 400px; 
+    text-align: center; 
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5); /* ظل قوي عشان المربع يبرز فوق الأسود */
+    backdrop-filter: blur(10px); /* تأثير الزجاج المغبش */
+}
+
+.login-container h2 {
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+.input-group { 
+    margin-bottom: 20px; 
+    text-align: left; 
+}
+
+.input-group label {
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.input-group input { 
+    width: 100%; 
+    padding: 14px; 
+    border: 1px solid #d2d2d7; 
+    border-radius: 12px; 
+    outline: none;
+    font-size: 16px;
+    transition: border 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #0071e3;
+}
+
+/* --- 4. الصفحة الرئيسية والمنتجات (Home & Products) --- */
+.container { 
+    max-width: 1200px; 
+    margin: 40px auto; 
+    padding: 0 20px; 
+    text-align: center; 
+}
+
+.container h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.product-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); 
+    gap: 30px; 
+    margin-top: 50px; 
+}
+
+.product-card { 
+    background: #ffffff; 
+    padding: 25px; 
+    border-radius: 22px; 
+    transition: all 0.4s ease; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05); 
+}
+
+.product-card:hover { 
+    transform: translateY(-10px); 
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12); 
+}
+
+.product-card img { 
+    width: 100%; 
+    height: 220px; 
+    object-fit: contain; 
+    margin-bottom: 20px;
+}
+
+.product-card h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.product-card p {
+    color: #0071e3;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+/* --- 5. الأزرار (Buttons) --- */
+.btn-main { 
+    background: #0071e3; 
+    color: #ffffff; 
+    border: none; 
+    padding: 14px 28px; 
+    border-radius: 30px; 
+    cursor: pointer; 
+    font-weight: 600;
+    font-size: 16px;
+    transition: 0.3s;
+    width: 100%;
+}
+
+.btn-main:hover { 
+    background: #0077ed; 
+    transform: scale(1.02);
+}
+
+/* --- 6. صفحة السلة (Cart Page) --- */
+.cart-list {
+    margin-top: 30px;
+}
+
+.cart-item { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    background: #ffffff; 
+    padding: 20px 30px; 
+    margin-bottom: 15px; 
+    border-radius: 18px; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+
+.remove-btn { 
+    background: #ff3b30; 
+    color: #ffffff; 
+    border: none; 
+    padding: 8px 18px; 
+    border-radius: 10px; 
+    cursor: pointer; 
+    transition: 0.3s;
+}
+
+.remove-btn:hover {
+    background: #e03127;
+}
+
+.cart-summary {
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    margin-top: 40px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+/* --- 7. التنسيق للموبايل (Responsive) --- */
+@media (max-width: 768px) {
+    .navbar { padding: 15px 20px; }
+    .logo { font-size: 22px; }
+    .nav-links a { margin-left: 15px; font-size: 14px; }
+    .login-container { width: 90%; padding: 30px; }
+    .container h1 { font-size: 28px; }
+}

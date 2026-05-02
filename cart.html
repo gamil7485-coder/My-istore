@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - iStore</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">iStore</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="cart.html">Cart</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h2>Your Shopping Cart</h2>
+        <div id="cartItems" class="cart-list">
+            <!-- Cart items will be loaded here -->
+        </div>
+        
+        <div class="cart-summary">
+            <h3>Total: $<span id="totalPrice">0</span></h3>
+            <button class="btn-main" onclick="checkout()">Checkout</button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
